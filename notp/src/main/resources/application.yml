@@ -1,0 +1,19 @@
+# 端口
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tb_online_study?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123
+
+mybatis:
+  type-aliases-package: cn.xq.notp.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 输出mybatis日志
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    # 开启驼峰功能
+    map-underscore-to-camel-case: true
